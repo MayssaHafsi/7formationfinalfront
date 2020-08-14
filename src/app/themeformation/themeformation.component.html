@@ -1,0 +1,28 @@
+
+ 
+  
+ 
+
+
+<!-- citation -->
+<section id="citation">
+    <div class="row">
+        <div class="container" style="height: 800px ;">
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <fieldset>
+                <legend style="text-align: center; color:#0969d1; font-family :Montserrat Alternates Sans-serif ;"><u><i>Domaines</i></u></legend>
+          <ul>
+            <li style="cursor: pointer;"  *ngFor="let domaine of listD" [id]="domaine.id" ><a  (click)="devis(domaine.id)">{{domaine.nom}}</a></li>
+        </ul>   
+        </fieldset>
+        </div>
+          </div>
+  
+      
+  
+  
+  
+  

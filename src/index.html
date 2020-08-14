@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>7 Formation</title>
+  <base href="/">
+  
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="author" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+<link rel="stylesheet" href="assets/css/owl.carousel.css">
+<link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+<link rel="stylesheet" href="assets/css/styles.css">
+
+   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css"/>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.3/css/bootstrapValidator.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!---- AnyOther custom stylesheets ---->
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.js"></script>
+    <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.3/js/bootstrapValidator.js"></script>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.3/js/bootstrapValidator.min.js"> </script>
+    <script src="assets/js/form.js"></script>
+
+    <script>
+      function blink(ob)
+      {
+      if (ob.style.visibility == "visible" )
+      {
+      ob.style.visibility = "hidden";
+      }
+      else
+      {
+      ob.style.visibility = "visible";
+      }
+      }
+      setInterval("blink(bl)",500);
+      </script>
+
+<!-- MAIN CSS -->
+<link rel="stylesheet" href="assets/css/templatemo-style.css">
+</head>
+<body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+  <!-- PRE LOADER -->
+  <section class="preloader">
+    <div class="spinner">
+
+         <span class="spinner-rotate"></span>
+         
+    </div>
+</section>
+  <app-root>
+</app-root>
+ <!-- SCRIPTS -->
+
+ <script src="assets/js/jquery.js"></script>
+ 
+ 
+ <script src="assets/js/bootstrap.min.js"></script>
+ 
+ <script src="assets/js/owl.carousel.min.js"></script>
+ 
+ <script src="assets/js/smoothscroll.js"></script>
+ <script src="assets/js/custom.js"></script>
+ <script src="assets/js/file.js"></script>
+ <script>
+  function forcerTelechargement($nom, $situation, $poids)
+{
+   header('Content-Type: application/octet-stream');
+   header('Content-Length: '. $poids);
+   header('Content-disposition: attachment; filename='. $nom);
+   header('Pragma: no-cache');
+   header('Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0');
+   header('Expires: 0');
+   readfile($situation);
+   exit();
+}
+</script>
+
+ 
+</body>  
+</html>

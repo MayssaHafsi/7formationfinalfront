@@ -1,0 +1,117 @@
+ 
+
+
+<!-- citation -->
+<section id="citation">
+  <div class="row">
+      <div class="container" style="height: 800px ;">
+        <div class="row">
+          <div class="col-md-12 col-sm-12">
+            <div class="section-title">
+              <div class="button">
+                <span class="line-1"></span>
+                <span class="line-2"></span>
+                <span class="line-3"></span>
+                <span class="line-4"></span>
+                <span class="line-5"></span>
+                <span class="line-6"></span>
+                <i> Formations </i>
+              </div>
+            </div>
+          </div>
+
+          <!-- <div class="container" style="height: 100vh ;" >   -->
+          <!-- <div class="row" style="display: flex; flex-wrap: wrap;"> -->
+
+            <div class="col-lg-4" *ngFor="let formation of listF" [id]="formation.id"
+              style="margin-bottom: 120px;">
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <article class="card" style="position:relative ; z-index:1;">
+                      <header>
+                        <a>
+                          <h2
+                            style="text-align: center; color:#0969d1; font-family :Montserrat Alternates Sans-serif ;">
+                            <i>{{formation.nom}}</i></h2>
+                            
+                        </a>
+                        
+                      </header>
+
+                      <img src={{formation.img}} alt="formation" />
+                      <div class="content">
+
+                        <a class="badge badge-danger" style="padding: 6px;">{{formation.niveau}}</a>
+                        <a class="badge badge-danger" style="padding: 6px;">{{formation.type}}</a>
+                        <a class="badge badge-danger" style="padding: 6px;">{{formation.cat}}</a>
+                        <a class="badge badge-danger" style="padding: 6px;">{{formation.duree}}</a>
+
+                      </div>
+                      <footer style="background-color:#ddc704 ;">
+
+                      </footer>
+                    </article>
+                  </div>
+                  <div class="flip-card-back">
+
+                    <article class="card" style="position:relative ; z-index:1;">
+
+
+
+                      <legend
+                        style="text-align: center; color:#0969d1; font-family :Montserrat Alternates Sans-serif ;">
+                        <i>Objectifs</i></legend>
+                      <ul>
+                        <li>{{formation.objectifun}}</li>
+                        <li>{{formation.objectifd}}</li>
+                        <li>{{formation.objectift}}</li>
+                        <li>{{formation.objectifm}}</li>
+
+
+                      </ul>
+
+                      <legend
+                        style="text-align: center; color:#0969d1; font-family :Montserrat Alternates Sans-serif ;">
+                        <i>Public Cible</i></legend>
+                      <ul>
+                        <li>{{formation.cibleun}}</li>
+                        <li>{{formation.cibled}} </li>
+
+                        <a class="badge badge-danger" style="padding: 6px;">{{formation.duree}}</a>
+                      </ul>
+
+                      <footer style="background-color:white ;">
+                       <a  (click)="detailFormation(formation.id)" class="btn btn-primary" style="float: right; padding-left:8px;"><i class="glyphicon glyphicon-zoom-in"></i> Détail</a>
+                       <a  (click)="PasserDevis(formation.id)" class="btn btn-success" style="float: right; padding-left:8px;"><i class="glyphicon glyphicon-zoom-in"></i> Devis</a>
+                      </footer>
+
+
+
+
+
+                    </article>
+
+
+
+                  </div>
+                </div>
+              </div>
+
+
+
+
+
+
+            <!-- </div> -->
+            <!-- </div> -->
+
+
+          </div>
+
+          
+          
+        </div>
+        
+        
+       

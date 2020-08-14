@@ -1,0 +1,111 @@
+ 
+<div class="container" style="height: 850px ;" id="detail">
+    
+      <legend>  <h3  style="text-align: center; color:#0969d1; font-family :Montserrat Alternates Sans-serif ;"><i> Détail Formation</i></h3>  </legend>
+<br/>
+<br/>
+<br/>
+      
+        
+        <div class="col-md-3 col-sm-6">
+          <div class="team-thumb">
+               <div class="team-image">
+                    <img src="assets/images/img_avatar1.png" class="img-responsive" alt="">
+               </div>
+               <div class="team-info">
+                    <h3>{{fo.formateur.prenom }} {{fo.formateur.nom}} </h3>
+                    <span>{{fo.formateur.email}}</span>
+               </div>
+               <ul class="social-icon">
+                    <li><a href="#" class="fa fa-facebook-square" attr="facebook icon"></a></li>
+                    <li><a href="#" class="fa fa-twitter"></a></li>
+                    <li><a href="#" class="fa fa-instagram"></a></li>
+               </ul>
+          </div>
+          
+
+     </div>
+     <fieldset>
+      <div class="form-row">
+        <legend style="color:#0969d1">Objectifs</legend>
+        <ul>
+          <li>Permettre d'éviter les qui pourquoi et ainsi la mauvaise entente</li>
+          <li>Suivre les astuces de laisser votre porte ouverte ,faire des points réguliers, utiliser des outils collaboratifs pour faciliter la communication.</li>
+          <li>Construire rapidement une équipe cohérente et efficace</li>
+        </ul>
+        <legend style="color:#0969d1">Public Cible</legend>
+        <ul>
+          <li>Tous membres d'équipe , chef de projets , cadres et mangers</li>
+        </ul>
+      </div>
+    </fieldset>
+    
+    <fieldset>
+      <br/>
+      <br/>
+     
+    
+  <div class="form-row">
+    
+
+      <div class="col-md-4 mb-3">
+          <label>Nom</label>
+          <input type="text" class="form-control" [(ngModel)]="fo.nom" placeholder="Saisir le nom de la formation" required>
+          
+        </div>
+        
+          <div class="col-md-4 mb-3">
+            <label>Type-formation</label>
+            <input type="text" class="form-control" [(ngModel)]="fo.type"  placeholde="saisir le nombre maximum du place" required>
+          
+          </div>
+          
+
+        <div class="col-md-4 mb-3">
+        <label>Domaine</label>
+       
+          <input type="text" class="form-control" [(ngModel)]="fo.domaine.nom"  placeholde="saisir le nombre maximum du place" required>
+          
+          </div>
+      
+     
+       
+          <div class="col-md-4 mb-3">
+            <label>Niveau</label>
+            <input type="text" class="form-control" [(ngModel)]="fo.niveau"  placeholde="saisir le nombre maximum du place" required>
+          
+          </div>
+        </div>
+          </fieldset>
+        
+
+        <fieldset>
+          <div class="form-row">    
+
+                
+
+                <div class="col-md-6 mb-3">
+                    <label>Plan de formation</label>
+                    <textarea [(ngModel)]="fo.description" class="form-control" id="exampleTextarea1" rows="8" cols="40"></textarea>
+                  
+                  </div>
+                  
+                </div>
+                 </fieldset>
+                 <br/>
+                 <br/>
+
+                 <div class="col-md-2 mb-2">
+                  <a  (click)="retour()" class="btn btn-success" style="float: right; padding-left:12px; "><i class="	glyphicon glyphicon-menu-left"></i> Retour</a>
+                  </div>
+                  
+          </div>
+  
+            
+    
+      
+     
+       
+      
+  
+  

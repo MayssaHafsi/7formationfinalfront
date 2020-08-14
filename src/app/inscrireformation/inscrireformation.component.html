@@ -1,0 +1,161 @@
+<!-- Inscrireformation -->
+<section id="inscrire">
+    <div class="container">
+         
+
+              <div class="col-md-12 col-sm-12">
+                <form class="well form-horizontal" action=" " method="post"  id="contact_form">
+                    <fieldset>
+                    
+                    <!-- Form Name -->
+                    <legend style="text-align: center;"><h2><i>Inscription</i></h2></legend><br>
+                    
+                    <!-- Text input-->
+                    
+                    <div class="form-group">
+                      <label class="col-md-4 control-label">Nom <span style="color:red;">*</span></label>  
+                      <div class="col-md-4 inputGroupContainer">
+                      <div class="input-group">
+                      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                      <input  name="first_name" placeholder="Nom de la famille" class="form-control"  type="text" [(ngModel)]="demandeur.nom" required  pattern="[a-z A-Z]">
+                      
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <!-- Text input-->
+                    
+                    <div class="form-group">
+                      <label class="col-md-4 control-label" >Prénom <span style="color:red;">*</span></label> 
+                        <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                      <input name="last_name" placeholder="Prénom" class="form-control"  type="text" [(ngModel)]="demandeur.prenom" required pattern="[a-z A-Z]">
+                        </div>
+                      </div>
+                    </div>
+                    
+                      <div class="form-group"> 
+                      <label class="col-md-4 control-label">Sexe <span style="color:red;">*</span></label>
+                        <div class="col-md-4 selectContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+                        <select name="department" class="form-control selectpicker" [(ngModel)]="demandeur.sexe" required pattern="[féminin|masculin]">
+                          <option value="">Séléctionner ton sexe</option>
+                          <option value="féminin">Féminin</option>
+                          <option value="masculin">Masculin</option>
+                        </select>
+                      </div>
+                    </div>
+                    </div>
+                      
+                    <!-- Text input-->
+                    
+                    <div class="form-group">
+                      <label class="col-md-4 control-label">Cin</label>  
+                      <div class="col-md-4 inputGroupContainer">
+                      <div class="input-group">
+                      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                      <input  name="user_name" placeholder="Numéro de carte d'identité" class="form-control"  type="text" [(ngModel)]="demandeur.cin" pattern="[0-9]{8}">
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Adresse <span style="color:red;">*</span></label>  
+                        <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                        <input  name="user_name" placeholder="Adresse" class="form-control"  type="text" [(ngModel)]="demandeur.adresse" required pattern="[a-z A-Z]">
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label class="col-md-4 control-label">No contact <span style="color:red;">*</span></label>  
+                          <div class="col-md-4 inputGroupContainer">
+                          <div class="input-group">
+                              <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+                        <input name="contact_no" placeholder="contact" class="form-control" type="tel" [(ngModel)]="demandeur.numeroTelephone" required>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label class="col-md-4 control-label">E-Mail <span style="color:red;">*</span></label>  
+                          <div class="col-md-4 inputGroupContainer">
+                          <div class="input-group">
+                              <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                        <input name="email" placeholder="Adresse e-mail" class="form-control"  type="email" [(ngModel)]="demandeur.email" required pattern="[a-z A-Z]@[a-z A-Z].[a-z A-Z]{3}">
+                          </div>
+                        </div>
+                      </div>
+                    
+                   
+                    
+                    
+                    
+                    <!-- Text input-->
+                           
+                    
+                    
+                    <!-- Text input-->
+                           
+                    
+                    
+                    <!-- Select Basic -->
+                    
+                    <!-- Success message -->
+                    <div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Success!.</div>
+                    
+                    <!-- Button -->
+                    <div class="form-group">
+                      <label class="col-md-4 control-label"></label>
+                      <div class="col-md-4"><br>
+                      <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#myModal">SUBMIT <span class="glyphicon glyphicon-send"></span></button>
+                      
+                      <div class="modal" id="myModal">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                          
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                              <h1 class="modal-title"></h1>
+                              <button type="button" class="close" data-dismiss="modal">×</button>
+                            </div>
+                            
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                                
+                                <h4 style="text-align: center;">Annulation systématique d'inscription aprés 3 jours en cas de non payement des frais d'inscription en ligne ou espèce.</h4>     
+                            </div>
+                            
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                              
+                              <button type="submit" (click)="inscrire()" class="btn btn-success" data-dismiss="modal"><i class="glyphicon glyphicon-ok"></i>Inscrire</button>
+                              
+                              <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="glyphicon glyphicon-remove-circle"></i>Close</button>
+                            </div>
+                            
+                          </div>
+                        </div>
+                      </div>
+                      </div>
+                    </div>
+                    
+                    </fieldset>
+                    </form>
+                    </div>
+                    
+                    <div class="col-md-2 mb-2">
+                      <a  (click)="retour()" class="btn btn-success" style="float: right; padding-left:12px; "><i class="	glyphicon glyphicon-menu-left"></i> Retour</a>
+                      </div>
+              </div><!--findiv-->
+
+              
+
+    
+    
+</section>
+
